@@ -20,15 +20,15 @@
                         @endauth
 
                         @guest
-                        <a href="{{ route('register') }}" class="btn btn-secondary me-2">Register Now</a>
-                        <a href="{{ route('login') }}" class="btn btn-white-outline">Login</a>
+                        <a href="{{ url('/register') }}" class="btn btn-secondary me-2">Register Now</a>
+                        <a href="{{ url('/login') }}" class="btn btn-white-outline">Login</a>
                         @endguest
                     </p>
                 </div>
             </div>
             <div class="col-lg-7">
                 <div class="hero-img-wrap">
-                    <img src="{{ asset('assets/images/parfum-hero.png') }}" class="img-fluid" alt="Parfum Hero">
+                    <img src="{{ asset('assets/images/parfum-hero.png') }}" class="img-fluid" alt="Parfum Hero" style="margin-left: 120px;">
                 </div>
             </div>
         </div>
@@ -92,7 +92,7 @@
 
             <div class="col-lg-5">
                 <div class="img-wrap">
-                    <img src="{{ asset('assets/images/why-choose-us-img.jpg') }}" class="img-fluid">
+                    <img src="{{ asset('assets/images/why-choose-us-imgs.jpg') }}" class="img-fluid">
                 </div>
             </div>
 
@@ -172,7 +172,7 @@
 
         <div class="row">
             <div class="col-lg-7 mx-auto text-center">
-                <h2 class="section-title">Customer Reviews</h2>
+                <h2 class="section-title">Testimonials</h2>
             </div>
         </div>
 
@@ -194,33 +194,35 @@
                     <div class="testimonial-slider">
 
                         @foreach($testimonials as $testimonial)
-                        <div class="item">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8 mx-auto">
+                            <div class="item">
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-8 mx-auto">
 
-                                    <div class="testimonial-block text-center">
-                                        <blockquote class="mb-5">
-                                            <p>&ldquo;{{ $testimonial->content }}&rdquo;</p>
-                                        </blockquote>
+                                        <div class="testimonial-block text-center">
+                                            <blockquote class="mb-5">
+                                                <p>&ldquo;{{ $testimonial->content }}&rdquo;</p>
+                                            </blockquote>
 
-                                        <div class="author-info">
+                                            <div class="author-info">
 
-                                            <div class="author-pic">
-                                                <img src="{{ asset('storage/' . $testimonial->photo) }}"
-                                                    class="img-fluid">
+                                                <div class="author-pic">
+                                                    <img src="{{ asset('storage/' . $testimonial->photo) }}"
+                                                         class="img-fluid"
+                                                         alt="{{ $testimonial->name }}"
+                                                         style="width: 90px; height: 90px; object-fit: cover; border-radius: 50%;">
+                                                </div>
+
+                                                <h3 class="font-weight-bold">{{ $testimonial->name }}</h3>
+                                                <span class="position d-block mb-3">
+                                                    {{ $testimonial->position ?? '' }}
+                                                </span>
+
                                             </div>
-
-                                            <h3 class="font-weight-bold">{{ $testimonial->name }}</h3>
-                                            <span class="position d-block mb-3">
-                                                {{ $testimonial->position ?? '' }}
-                                            </span>
-
                                         </div>
-                                    </div>
 
+                                    </div>
                                 </div>
                             </div>
-                        </div>
                         @endforeach
 
                     </div>

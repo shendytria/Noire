@@ -29,7 +29,10 @@
                      data-bs-toggle="modal"
                      data-bs-target="#productModal{{ $product->id }}">
 
-                    <img src="{{ asset('storage/' . $product->image) }}" class="img-fluid product-thumbnail">
+                    <img src="{{ asset('storage/' . $product->image) }}"
+                            class="img-fluid product-thumbnail" 
+                            alt="{{ $product->name }}"
+                            style="width: 100%; height: 300px; object-fit: cover;">
 
                     <h3 class="product-title">{{ $product->name }}</h3>
                     <strong class="product-price">Rp {{ number_format($product->price, 0, ',', '.') }}</strong>

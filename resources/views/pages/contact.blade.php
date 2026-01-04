@@ -10,13 +10,25 @@
             <div class="col-lg-5">
                 <div class="intro-excerpt">
                     <h1>Contact</h1>
-                    <p class="mb-4">Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique.</p>
-                    <p><a href="" class="btn btn-secondary me-2">Shop Now</a><a href="#" class="btn btn-white-outline">Explore</a></p>
+                    <p class="mb-4">Noiré is crafted for those who value elegance in every detail.
+                        Each scent is designed to express personality, confidence, and timeless charm.
+                        Discover a fragrance that feels uniquely yours.</p>
+                    <p>
+                        @auth
+                        <a href="{{ route('shop') }}" class="btn btn-secondary me-2">Shop Now</a>
+                        <a href="{{ route('home') }}" class="btn btn-white-outline">Explore</a>
+                        @endauth
+
+                        @guest
+                        <a href="{{ url('/register') }}" class="btn btn-secondary me-2">Register Now</a>
+                        <a href="{{ url('/login') }}" class="btn btn-white-outline">Login</a>
+                        @endguest
+                    </p>
                 </div>
             </div>
             <div class="col-lg-7">
                 <div class="hero-img-wrap">
-                    <img src="{{ asset('assets/images/couch.png') }}" class="img-fluid">
+                    <img src="{{ asset('assets/images/parfum-hero.png') }}" class="img-fluid" alt="Parfum Hero" style="margin-left: 120px;">
                 </div>
             </div>
         </div>
@@ -58,7 +70,7 @@
                                     </svg>
                                 </div> <!-- /.icon -->
                                 <div class="service-contents">
-                                    <p>info@yourdomain.com</p>
+                                    <p>noiré@gmail.com</p>
                                 </div> <!-- /.service-contents-->
                             </div> <!-- /.service -->
                         </div>

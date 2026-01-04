@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ShopController;
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\ServicesController;
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\HomeController;
 
 /*
@@ -15,8 +17,8 @@ use App\Http\Controllers\HomeController;
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/shop', [ShopController::class, 'index'])->name('shop');
 Route::get('/about', [AboutController::class, 'index'])->name('about');
-Route::get('/services', fn() => view('pages.services'))->name('services');
-Route::get('/blog', fn() => view('pages.blog'))->name('blog');
+Route::get('/services', [ServicesController::class, 'index'])->name('services');
+Route::get('/blog', [BlogController::class, 'index'])->name('blogs');
 Route::get('/contact', fn() => view('pages.contact'))->name('contact');
 
 /*

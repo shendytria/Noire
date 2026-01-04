@@ -35,12 +35,12 @@
         <div class="row g-5 mb-5">
             <div class="col-lg-4">
                 <div class="mb-4 footer-logo-wrap"><a href="#" class="footer-logo">Noiré</a></div>
-                <p class="mb-4">Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus malesuada.</p>
+                <p class="mb-4">Discover premium, high-quality perfumes with elegant and long-lasting scents.</p>
                 <ul class="list-unstyled custom-social">
-                    <li><a href="#"><span class="fa fa-facebook-f"></span></a></li>
-                    <li><a href="#"><span class="fa fa-twitter"></span></a></li>
-                    <li><a href="#"><span class="fa fa-instagram"></span></a></li>
-                    <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
+                    <li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
+                    <li><a href="#"><span class="fab fa-twitter"></span></a></li>
+                    <li><a href="#"><span class="fab fa-instagram"></span></a></li>
+                    <li><a href="#"><span class="fab fa-linkedin"></span></a></li>
                 </ul>
             </div>
 
@@ -48,10 +48,10 @@
                 <div class="row links-wrap">
                     <div class="col-6 col-sm-6 col-md-3">
                         <ul class="list-unstyled">
-                            <li><a href="#">About us</a></li>
-                            <li><a href="#">Services</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Contact us</a></li>
+                            <li><a href="about">About us</a></li>
+                            <li><a href="services">Services</a></li>
+                            <li><a href="blog">Blog</a></li>
+                            <li><a href="contact">Contact us</a></li>
                         </ul>
                     </div>
                     <div class="col-6 col-sm-6 col-md-3">
@@ -71,9 +71,7 @@
                     </div>
                     <div class="col-6 col-sm-6 col-md-3">
                         <ul class="list-unstyled">
-                            <li><a href="#">Nordic Chair</a></li>
-                            <li><a href="#">Kruzo Aero</a></li>
-                            <li><a href="#">Ergonomic Chair</a></li>
+                            <li><a href="#">Noiré</a></li>
                         </ul>
                     </div>
                 </div>
@@ -85,7 +83,7 @@
                 <div class="col-lg-6">
                     <p class="mb-2 text-center text-lg-start">
                         Copyright &copy;<script>document.write(new Date().getFullYear());</script>.
-                        All Rights Reserved. — Designed by <a href="https://untree.co">Untree.co</a>
+                        All Rights Reserved. — Designed by <a>Shendy</a>
                     </p>
                 </div>
                 <div class="col-lg-6 text-center text-lg-end">

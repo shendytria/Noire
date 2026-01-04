@@ -32,9 +32,9 @@
                 </div>
             </div>
 
-            <div class="col-lg-7">
+            <div class="col-lg-4">
                 <div class="hero-img-wrap">
-                    <img src="{{ asset('assets/images/parfum-hero.png') }}" class="img-fluid" alt="Parfum Hero">
+                    <img src="{{ asset('assets/images/parfum-hero.png') }}" class="img-fluid" alt="Parfum Hero" style="transform: scale(1.3); transform-origin: center right; pointer-events: none;">
                 </div>
             </div>
 
@@ -61,7 +61,9 @@
                     <a class="product-item" href="{{ route('shop', $product->slug) }}">
 
                         <img src="{{ asset('storage/' . $product->image) }}"
-                             class="img-fluid product-thumbnail" alt="{{ $product->name }}">
+                            class="img-fluid product-thumbnail" 
+                            alt="{{ $product->name }}"
+                            style="width: 100%; height: 300px; object-fit: cover;">
 
                         <h3 class="product-title">{{ $product->name }}</h3>
 
@@ -138,7 +140,7 @@
 
             <div class="col-lg-5">
                 <div class="img-wrap">
-                    <img src="{{ asset('assets/images/why-choose-us-img.jpg') }}" class="img-fluid">
+                    <img src="{{ asset('assets/images/why-choose-us-imgs.jpg') }}" class="img-fluid">
                 </div>
             </div>
 
@@ -156,15 +158,15 @@
                 <div class="imgs-grid">
 
                     <div class="grid grid-1">
-                        <img src="{{ asset('assets/images/img-grid-1.jpg') }}" class="img-fluid">
+                        <img src="{{ asset('assets/images/parfum-grid-1.jpg') }}" class="img-fluid">
                     </div>
 
                     <div class="grid grid-2">
-                        <img src="{{ asset('assets/images/img-grid-2.jpg') }}" class="img-fluid">
+                        <img src="{{ asset('assets/images/parfum-grid-2.jpg') }}" class="img-fluid">
                     </div>
 
                     <div class="grid grid-3">
-                        <img src="{{ asset('assets/images/img-grid-3.jpg') }}" class="img-fluid">
+                        <img src="{{ asset('assets/images/parfum-grid-3.jpg') }}" class="img-fluid">
                     </div>
 
                 </div>
@@ -206,7 +208,7 @@
                         <div class="pt-3">
                             <h3>{{ $product->name }}</h3>
                             <p>{{ \Illuminate\Support\Str::limit($product->description, 80) }}</p>
-                            <p><a href="{{ url('cart') }}">Read More</a></p>
+                            <p><a href="{{ url('shop') }}">Read More</a></p>
                         </div>
 
                     </div>
@@ -260,7 +262,9 @@
 
                                                 <div class="author-pic">
                                                     <img src="{{ asset('storage/' . $testimonial->photo) }}"
-                                                         class="img-fluid">
+                                                         class="img-fluid"
+                                                         alt="{{ $testimonial->name }}"
+                                                         style="width: 90px; height: 90px; object-fit: cover; border-radius: 50%;">
                                                 </div>
 
                                                 <h3 class="font-weight-bold">{{ $testimonial->name }}</h3>
@@ -310,7 +314,9 @@
 
                         <a href="{{ url('blog/' . $blog->slug) }}" class="post-thumbnail">
                             <img src="{{ asset('storage/' . $blog->image) }}"
-                                 alt="{{ $blog->title }}" class="img-fluid">
+                                 alt="{{ $blog->title }}" 
+                                 class="img-fluid"
+                                 style="width: 100%; height: 250px; object-fit: cover;">
                         </a>
 
                         <div class="post-content-entry">

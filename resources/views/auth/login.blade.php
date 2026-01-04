@@ -6,7 +6,7 @@
 <div class="container py-5">
     <div class="row align-items-center justify-content-center">
         <div class="col-md-6 d-none d-md-block text-center">
-            <img src="{{ asset('assets/images/sofa.png') }}" alt="Sofa" class="img-fluid" style="max-width: 80%; height: auto;">
+            <img src="{{ asset('assets/images/parfum-hero.png') }}" alt="Parfum Hero" class="img-fluid" style="max-width: 80%; height: auto;">
         </div>
         <div class="col-md-5">
             <div class="card shadow-sm border-0 p-4 rounded-4">
