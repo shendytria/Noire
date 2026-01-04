@@ -25,6 +25,15 @@
     <div class="col-md-3">
         <div class="card shadow-sm border-0">
             <div class="card-body text-center">
+                <h5>Total Coupons</h5>
+                <p class="fs-4 fw-bold">{{ $couponsCount }}</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card shadow-sm border-0">
+            <div class="card-body text-center">
                 <h5>Total Blogs</h5>
                 <p class="fs-4 fw-bold">{{ $blogsCount }}</p>
             </div>

@@ -34,7 +34,7 @@
 
             <div class="col-lg-4">
                 <div class="hero-img-wrap">
-                    <img src="{{ asset('assets/images/parfum-hero.png') }}" class="img-fluid" alt="Parfum Hero" style="transform: scale(1.3); transform-origin: center right; pointer-events: none;">
+                    <img src="{{ asset('assets/images/parfum-hero.png') }}" class="img-fluid" alt="Parfum Hero" style="transform: scale(1.5); transform-origin: center right; pointer-events: none;">
                 </div>
             </div>
 

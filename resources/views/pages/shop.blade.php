@@ -81,10 +81,15 @@
                                         Rp {{ number_format($product->price, 0, ',', '.') }}
                                     </h4>
 
-                                    <button class="btn btn-primary px-4 py-2">
-                                        <img src="{{ asset('assets/images/bag.svg') }}" width="18" class="me-2">
-                                        Add to Cart
-                                    </button>
+                                    <form action="{{ route('cart.add') }}" method="POST">
+                                        @csrf
+                                        <input type="hidden" name="product_id" value="{{ $product->id }}">
+
+                                        <button type="submit" class="btn btn-primary px-4 py-2">
+                                            <img src="{{ asset('assets/images/bag.svg') }}" width="18" class="me-2">
+                                            Add to Cart
+                                        </button>
+                                    </form>
 
                                 </div>
 

@@ -7,6 +7,9 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ServicesController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\CartController;
+use App\Http\Controllers\CheckoutController;
+use App\Http\Controllers\MidtransCallbackController;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,10 +42,26 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 |--------------------------------------------------------------------------
 */
 Route::middleware(['auth', 'isCustomer'])->group(function () {
-    Route::get('/cart', fn() => view('pages.cart'))->name('cart');
-    Route::get('/checkout', fn() => view('pages.checkout'))->name('checkout');
+    Route::post('/cart/add', [CartController::class, 'add'])->name('cart.add');
+    Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
+    Route::post('/cart/coupon', [CheckoutController::class, 'applyCoupon'])->name('checkout.coupon.apply');
+    Route::delete('/cart/coupon', [CheckoutController::class, 'removeCoupon'])->name('checkout.coupon.remove');
+    Route::patch('/cart/{id}/increase', [CartController::class, 'increase'])->name('cart.increase');
+    Route::patch('/cart/{id}/decrease', [CartController::class, 'decrease'])->name('cart.decrease');
+    Route::delete('/cart/item/{id}', [CartController::class, 'remove'])->name('cart.remove');
+
+    Route::post('/checkout/process', [CheckoutController::class, 'process'])->name('checkout.process');
+    Route::get('/checkout', [CheckoutController::class, 'index'])->name('checkout');
+
     Route::get('/thankyou', fn() => view('pages.thankyou'))->name('thankyou');
 });
+
+/*
+|--------------------------------------------------------------------------
+| Midtrans Callback (PUBLIC)
+|--------------------------------------------------------------------------
+*/
+Route::post('/midtrans/callback', [MidtransCallbackController::class, 'handle'])->name('midtrans.callback');
 
 /*
 |--------------------------------------------------------------------------
@@ -55,5 +74,6 @@ Route::middleware(['auth','isAdmin'])->prefix('admin')->as('admin.')->group(func
     Route::resource('products', \App\Http\Controllers\Admin\ProductController::class);
     Route::resource('testimonials', \App\Http\Controllers\Admin\TestimonialController::class);
     Route::resource('blogs', \App\Http\Controllers\Admin\BlogController::class);
+    Route::resource('coupons', \App\Http\Controllers\Admin\CouponController::class);
 });
 
