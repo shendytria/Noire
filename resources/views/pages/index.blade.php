@@ -32,9 +32,9 @@
                 </div>
             </div>
 
-            <div class="col-lg-4">
+            <div class="col-lg-7">
                 <div class="hero-img-wrap">
-                    <img src="{{ asset('assets/images/parfum-hero.png') }}" class="img-fluid" alt="Parfum Hero" style="transform: scale(1.5); transform-origin: center right; pointer-events: none;">
+                    <img src="{{ asset('assets/images/parfum-hero.png') }}" class="img-fluid" alt="Parfum Hero" style="transform: scale(1.2); transform-origin: center right; pointer-events: none; margin-left: 150px; margin-top: 60px;">
                 </div>
             </div>
 
